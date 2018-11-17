@@ -1,0 +1,124 @@
+$charcoal-gray:                             #211f1d;
+$light-gray:                                #dedddd;
+
+$superion-cobalt-blue:                      hsl(202, 87%, 42%);
+$superion-dark-blue:                        hsl(217, 61%, 36%);
+$superion-light-green:                      hsl(170, 87%, 34%);
+$superion-dark-green:                       hsl(169, 45%, 24%);
+$superion-teal:                             hsl(183, 88%, 40%);
+$superion-yellow:                           hsl(43, 98%, 53%);
+$superion-purple:                           hsl(274, 46%, 32%);
+$superion-red:                              hsl(347, 71%, 26%);
+
+$primary--rotate-30:        adjust-hue($primary, 30);
+$primary--rotate-45:        adjust-hue($primary, 45);
+$primary--rotate-60:        adjust-hue($primary, 60);
+$primary--rotate-90:        adjust-hue($primary, 90);
+$primary--rotate-120:       adjust-hue($primary, 120);
+$primary--rotate-135:       adjust-hue($primary, 135);
+$primary--rotate-150:       adjust-hue($primary, 150);
+$primary--rotate-180:       adjust-hue($primary, 180);
+$primary--rotate-210:       adjust-hue($primary, 210);
+$primary--rotate-225:       adjust-hue($primary, 225);
+$primary--rotate-240:       adjust-hue($primary, 240);
+$primary--rotate-270:       adjust-hue($primary, 270);
+$primary--rotate-300:       adjust-hue($primary, 300);
+$primary--rotate-315:       adjust-hue($primary, 315);
+$primary--rotate-330:       adjust-hue($primary, 330);
+
+
+$primary__2chrom--180:      desaturate(darken($primary--rotate-180, 12%), 1%);
+
+$primary__3chrom--120:      desaturate(darken($primary--rotate-120, 12%), 1%);
+$primary__3chrom--240:      desaturate(darken($primary--rotate-240, 12%), 1%);
+
+$primary__4chrom--90:       desaturate(darken($primary--rotate-90, 26%), 1%);
+$primary__4chrom--180:      desaturate(darken($primary--rotate-180, 18%), 1%);
+$primary__4chrom--270:      desaturate(darken($primary--rotate-270, 3%), 1%);
+
+$primary__5chrom--72:       desaturate(darken(adjust-hue($primary, 72), 12%), 1%);
+$primary__5chrom--144:      desaturate(darken(adjust-hue($primary, 144), 12%), 1%);
+$primary__5chrom--216:      desaturate(darken(adjust-hue($primary, 216), 12%), 1%);
+$primary__5chrom--288:      desaturate(darken(adjust-hue($primary, 288), 12%), 1%);
+
+$primary__6chrom--60:       desaturate(darken($primary--rotate-60, 12%), 1%);
+$primary__6chrom--120:      desaturate(darken($primary--rotate-120, 12%), 1%);
+$primary__6chrom--180:      desaturate(darken($primary--rotate-180, 12%), 1%);
+$primary__6chrom--240:      desaturate(darken($primary--rotate-240, 12%), 1%);
+$primary__6chrom--300:      desaturate(darken($primary--rotate-300, 12%), 1%);
+
+$primary__8chrom--45:       desaturate(darken($primary--rotate-45, 12%), 1%);
+$primary__8chrom--90:       desaturate(darken($primary--rotate-90, 12%), 1%);
+$primary__8chrom--135:      desaturate(darken($primary--rotate-135, 12%), 1%);
+$primary__8chrom--180:      desaturate(darken($primary--rotate-180, 12%), 1%);
+$primary__8chrom--225:      desaturate(darken($primary--rotate-225, 12%), 1%);
+$primary__8chrom--270:      desaturate(darken($primary--rotate-270, 12%), 1%);
+$primary__8chrom--315:      desaturate(darken($primary--rotate-315, 12%), 1%);
+
+
+
+$light-text-color:                          #ffffff;
+$text-color:                                $charcoal-gray;
+$form-label-color:                          #777363;
+$data-value-color:                          #222;
+
+$expanded-sidebar-text-color:               $text-color;
+
+$link-color:                                $superion-dark-blue;
+$link-color--dark-bg:                       $superion-yellow;
+$visited-link-color:                        $superion-cobalt-blue;
+$emphasis-color:                            #72246c;
+$soft-link-color:                           #666666;
+$error-color:                               #990000;
+
+$border-color:                              #999;
+$input-border-color:                        #999;
+$border-radius:                             4px;  // standard bootstrap border-radius-base
+$input-border-radius:                       3px;  // standard kendo border radius
+$standard-border-width:                     1px;
+$standard-border:                           $standard-border-width solid $border-color;
+
+$background-color-darkest:                  hsl(0, 0%, 46%);
+$background-color-dark:                     hsl(0, 0%, 88%);
+$background-color-light:                    hsl(0, 0%, 93%);
+$background-color-lightest:                 hsl(0, 0%, 96%);
+
+$bootstrap-success:                         #5cb85c;
+$bootstrap-danger:                          #d9534f;
+$bootstrap-warning:                         #f0ad4e;
+$bootstrap-info:                            #31b0d5;
+
+$side-navbar-bg:                            $background-color-dark;
+$panel-header-color:                        $side-navbar-bg;
+
+$pending-approvals-history-pending:         $text-color;
+$pending-approvals-history-hold:            $bootstrap-warning;
+$pending-approvals-history-rejected:        $bootstrap-danger;
+$pending-approvals-history-accepted:        $bootstrap-success;
+$pending-approvals-history-forward:         $bootstrap-info;
+$pending-approvals-history-future:          $form-label-color;
+
+$font-family:                               'Palanquin', arial, sans-serif;
+$default-font-size:                         14px;
+$echo-font-size:                            12px;
+$navbar-font-size:                          18px;
+
+$standard-disabled-color:                   #888;
+
+$changed-to:                                #bdf5b1;
+$changed-from:                              #f5b1b1;
+
+
+$shadow-first-level:                        0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
+$shadow-second-level:                       0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+
+$focus-ring-color:                          #5692f2;
+
+$table-active-color:                        #e4f7fd;
+$table-background:                          #e5e5e5;
+
+$toaster-success:                           #8dc63f;
+$toaster-error:                             #990000;
+$toaster-info:                              #005f83;
+$toaster-wait:                              #005f83;
+$toaster-warning:                           #e7a614;

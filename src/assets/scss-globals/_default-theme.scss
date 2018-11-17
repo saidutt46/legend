@@ -1,0 +1,15 @@
+$dark-orange-1:                             #EF462A;
+$primary-orange-2:                          #F4490C;
+$light-orange-3:                            #F2742E;
+
+$dark-purple-0:                             #1b1322;
+$dark-purple-1:                             #33293b;
+$primary-purple:                            #370761;
+$light-purple-3:                            #5c0ea0;
+
+$primary:                                   $primary-orange-2;
+$secondary:                                 $primary-purple;
+$dark-orange-on-white-background:           darken($dark-orange-1, 8%);
+
+$dark-background:                           #2d2d2d;
+$light-orange-on-dark-background:           $light-orange-3;

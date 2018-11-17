@@ -1,0 +1,102 @@
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+
+  .toolbar-brand__logo {
+    background-size: 225px;
+    background-position-y: center;
+  }
+
+  .favorite {
+    color: $superion-yellow;
+  }
+
+  .mat-table {
+    background: $dark-purple-0;
+  }
+  .mat-row.selectable {
+    &:hover{
+        background: $dark-purple-1;
+    }
+}
+  .header.mat-toolbar {
+    background: $dark-purple-0;
+  }
+
+  .mat-drawer-container {
+    background: $dark-purple-0;
+  }
+
+  .page-editor {
+    background: $dark-purple-1;
+  }
+
+  .application-links,
+  .app-sidenav {
+    background: $dark-purple-1;
+  }
+
+  .widget-background {
+    background: $dark-purple-1;
+    border: none;
+  }
+
+  .card-header{
+    background: $dark-purple-1;
+    border: none;
+    border-bottom: solid 2px $primary;
+  }
+
+  .mat-tab-nav-bar {
+    background: $dark-purple-1;
+  }
+
+  .mat-grid-tile .mat-icon {
+    color: white;
+  }
+
+  .mat-dialog-container {
+    background: $dark-purple-1;
+  }
+
+  .mat-menu-panel {
+    background: $dark-purple-1;
+  }
+
+  .mat-tree {
+    background: $dark-purple-0;
+  }
+  .mat-tree-node {
+    &:hover {
+      background: $dark-purple-1;
+    }
+    &.selected {
+      background: $dark-purple-1;
+      font-weight: bold;
+    }
+  }
+  .overflow-container {
+    background: $dark-purple-0;
+  }
+  .mat-list-item {
+    &:hover {
+      background: $dark-purple-1;
+    }
+    &.selected {
+      background: $dark-purple-1;
+      font-weight: bold;
+    }
+  }
+  .mat-stepper-horizontal, .mat-stepper-vertical {
+    background-color: $dark-purple-1;
+  }
+  .mat-pseudo-checkbox-checked {
+    background: $primary;
+  }
+  .mat-pseudo-checkbox:after {
+    color: $light-text-color;
+  }
+
+  .mat-bottom-sheet-container {
+    background: $dark-purple-1;
+  }
+}

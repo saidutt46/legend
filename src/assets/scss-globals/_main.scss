@@ -1,0 +1,11 @@
+// Import this file into any components scss file to get access to these
+// global variables, mixins, and themes by using the following import with the
+// webpack loader non relative path syntax ( ~ ):
+// @import "~assets/scss-globals/_main.scss";
+
+// import theme
+@import "_default-theme.scss";
+// import variables
+@import "_variables-non-theme.scss";
+// import mixins
+@import "_mixins.scss";

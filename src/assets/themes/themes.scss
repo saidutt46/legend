@@ -1,0 +1,19 @@
+@import "../scss-globals/main";
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$default-primary: mat-palette($mat-deep-orange);
+$default-accent:  mat-palette($mat-gray, A200, A100, A400);
+$default-theme:   mat-light-theme($default-primary, $default-accent);
+
+// Include the default theme styles.
+@include angular-material-theme($default-theme);
+
+$dark-primary: mat-palette($mat-deep-orange);
+$dark-accent:  mat-palette($mat-gray, 700, 600, 800);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@import "_dark-theme.scss";
+

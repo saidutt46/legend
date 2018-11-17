@@ -1,0 +1,94 @@
+$screen-xs:                                     480px;
+$screen-sm:                                     769px;
+$screen-md:                                     992px;
+$screen-lg:                                     1200px;
+$screen-xl:                                     1366px;
+
+$small-phone-breakpoint-width:                  $screen-xs;
+$mobile-breakpoint-width:                       $screen-sm;
+$desktop-md-breakpoint-width:                   $screen-md;
+$desktop-lg-breakpoint-width:                   $screen-lg;
+$desktop-xl-breakpoint-width:                   $screen-xl;
+
+
+// Extra small devices
+@mixin phone {
+    @media (max-width: #{$mobile-breakpoint-width - 1px}) {
+        @content;
+    }
+}
+// Small devices
+@mixin tablet {
+    @media (min-width: #{$mobile-breakpoint-width}) {
+        @content;
+    }
+}
+// Medium devices
+@mixin laptop {
+    @media (min-width: #{$desktop-md-breakpoint-width}) {
+        @content;
+    }
+}
+// Large devices
+@mixin desktop {
+    @media (min-width: #{$desktop-lg-breakpoint-width}) {
+        @content;
+    }
+}
+// Extra Large devices
+@mixin extra_large {
+    @media (min-width: #{$desktop-xl-breakpoint-width}) {
+        @content;
+    }
+}
+
+// Extras
+@mixin phone_portrait_only {
+    @media (max-width: #{$mobile-breakpoint-width - 1px}) and (orientation: portrait) {
+        @content;
+    }
+}
+@mixin phone_landscape_only {
+    @media (max-width: #{$mobile-breakpoint-width - 1px}) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin tablet_portrait_only {
+    @media (min-width: #{$mobile-breakpoint-width}) and (orientation: portrait) {
+        @content;
+    }
+}
+@mixin tablet_landscape_only {
+    @media (min-width: #{$mobile-breakpoint-width}) and (orientation: landscape) {
+        @content;
+    }
+}
+@mixin small_phone {
+    @media (max-width: #{$small-phone-breakpoint-width}) {
+        @content;
+    }
+}
+
+// Browser specific target targets
+@mixin ie_only {
+    // ie 11
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    	@content;
+    }
+    // edge
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+}
+@mixin edge_only {
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+}
+
+@mixin mat-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+    line-height: $size;
+  }
