@@ -1,3 +1,33 @@
-<p>
-  register works!
-</p>
+<mat-card class="header">
+    <mat-card-content fxLayoutAlign="center" fxLayout="column">
+        <h1 fxLayoutAlign="center" class="register-heading">Register</h1>
+        <form fxLayout="column" (submit)="registerForm.valid" [formGroup]="registerForm">
+            <mat-form-field>
+                <input id="name" matInput [(ngModel)]="user.name" formControlName="name" placeholder="name">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input id="username" matInput [(ngModel)]="user.username" formControlName="username" placeholder="username">
+              </mat-form-field>
+
+              <mat-form-field>
+                <input id="email" matInput [(ngModel)]="user.email" formControlName="email" placeholder="email">
+              </mat-form-field>
+              <mat-form-field>
+                <input id="password" matInput [(ngModel)]="user.password" formControlName="password"
+                [type]="hide ? 'password':'text'"
+                placeholder="password">
+               <mat-icon matSuffix (click)="hide = !hide" >
+                  {{hide ? 'visibility' : 'visibility_off'}}
+               </mat-icon>
+              </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+        <button class="register" mat-raised-button color="warn" type="submit" [disabled]="!registerForm.valid" (click)="onRegisterSubmit()" >Register</button>
+        <button mat-raised-button color="primary" [routerLink]="['/login']">Login</button>
+    </mat-card-actions>
+    <p class="ack">
+      Please complete all the fields to enable Register option
+    </p>
+  </mat-card>

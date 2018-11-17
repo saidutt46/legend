@@ -1,1 +1,352 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Palanquin:400,500,700);
+@import "assets/scss-globals/main";
+@import "assets/themes/themes";
+
+body {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin: 0;
+  }
+
+.mat-toolbar {
+    font-family: $font-family;
+  }
+ .mat-badge-content {
+    background: $primary;
+    .dark-theme & {
+      background: $primary;
+    }
+}
+.header.mat-toolbar {
+  border-bottom: 2px solid $primary;
+}
+.toolbar-brand__logo {
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: 225px;
+  height: 42px;
+  background-size: 225px;
+  background-position-y: center;
+
+  @media(max-width: 743px){
+      width: 48px;
+  }
+}
+.dark-theme .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: $primary;
+}
+.mat-snack-bar-container {
+  background: $background-color-dark;
+  color: $text-color;
+  &.success {
+    background: $bootstrap-success;
+    color: $text-color;
+    .dark-theme & {
+      background: $bootstrap-success;
+      color: $text-color;
+    }
+  }
+  &.warning {
+    background: $bootstrap-warning;
+    color: $text-color;
+    .dark-theme & {
+      background: $bootstrap-warning;
+      color: $text-color;
+    }
+  }
+  &.error {
+    background: $bootstrap-danger;
+    color: $text-color;
+    .dark-theme & {
+      background: $bootstrap-danger;
+      color: $text-color;
+    }
+  }
+  & .mat-button {
+    color: $text-color;
+  }
+  .dark-theme & {
+    background: $charcoal-gray;
+    color: $light-text-color;
+    & .mat-button {
+      color: $light-text-color;
+    }
+  }
+ }
+
+ .mat-icon-button {
+  opacity: .8;
+  &:hover {
+      opacity: 1;
+  }
+}
+.mat-button-toggle, .mat-list-item, .mat-menu-item,
+.mat-button, .mat-raised-button, .mat-icon-button,
+.mat-stroked-button, .mat-flat-button, .mat-fab,
+.mat-mini-fab, .mat-tab-link, .mat-dialog-title,
+.mat-dialog-content, .mat-dialog-actions {
+  font-family: $font-family;
+  color: inherit;
+}
+
+.mat-dialog-content.fill {
+  max-height: none;
+}
+.mat-dialog-container {
+  line-height: normal;
+}
+
+.application-links,
+.app-sidenav {
+  background: $background-color-light;
+}
+
+.app-sidenav{
+  width: 280px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: 18px;
+}
+
+.widget-background {
+  background: white;
+  padding: 15px;
+  height: 300px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+pa-widget-wrapper {
+  height: 356px;
+  background: inherit;
+}
+
+.card-header.mat-dialog-title{
+  margin: -24px -24px 0px -24px;
+  line-height: initial !important;
+}
+
+.card-header{
+  background: $background-color-light;
+  border-radius: 3px 3px 0 0;
+  border: solid 1px $background-color-dark;
+  border-bottom: solid 2px $primary;
+  padding: 0 15px 2px 15px;
+  height: 56px;
+  min-width: 0;
+
+  & .title-description {
+    margin-bottom: 4px;
+  }
+}
+
+.no-min-width {
+  min-width: 0;
+}
+.card-header-icon {
+  margin-right: 15px;
+}
+
+.card-header span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4em;
+}
+
+.card-header-title {
+  font-size: 18px;
+
+}
+.card-header-description {
+  font-size: 12px;
+}
+
+.mat-tab-nav-bar {
+  background: #fafafa;
+}
+
+.concentric-icon-wrapper {
+  top: 8px;
+  left: 9px;
+  position: relative;
+}
+
+.concentric-icon-parent {
+  transform: scale(1.1);
+}
+
+.concentric-icon-child {
+  left: -24px;
+  top: 1px;
+  position: relative;
+  transform: scale(.75);
+}
+
+.workspace-toolbar {
+  padding: 5px 0;
+  border-bottom: solid 1px $background-color-dark;
+  .dark-theme & {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.page-form {
+  margin: 5px 15px 0 15px;
+}
+
+.mat-tree {
+  background: $background-color-dark;
+  padding-top: 0;
+  font-size: 14px;
+  height: 350px;
+  min-width: 250px;
+  overflow: auto;
+}
+
+.mat-tree-node {
+  min-height: 40px;
+  white-space: nowrap;
+  padding-right: 15px;
+  cursor: pointer;
+  position: relative;
+  &:hover{
+      background:  mat-color($mat-grey, 400);
+  }
+  &.selected {
+      background:  mat-color($mat-grey, 400);
+      font-weight: bold;
+  }
+}
+
+.mat-list-item {
+  height: 40px;
+  cursor: pointer;
+  &:hover{
+      background:  mat-color($mat-grey, 400);
+  }
+  &.selected {
+      background:  mat-color($mat-grey, 400);
+      font-weight: bold;
+  }
+}
+
+.overflow-container {
+  background: $background-color-dark;
+  padding-top: 0;
+  font-size: 14px;
+  height: 100%;
+  min-width: 250px;
+  overflow: auto;
+}
+.overflow-content {
+  overflow: hidden;
+  height: auto;
+}
+.overlay-panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+.overlay-panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.fill {
+  height: calc(100vh - 116px);
+  max-height: 100%;
+}
+
+.mat-stepper-horizontal.fill {
+
+  & .mat-horizontal-content-container {
+    height: calc(100% - 72px);
+
+    & .mat-horizontal-stepper-content {
+      height: 100%;
+
+      & .first {
+        transform: translate3d(0, -100%, 0);
+      }
+      & .second {
+        transform: translate3d(0, -200%, 0);
+      }
+    }
+  }
+}
+
+.favorite {
+  color: $superion-yellow;
+}
+
+.mat-row.selectable {
+  &:hover{
+      background: $background-color-light;
+  }
+}
+
+.mat-form-field#searchInput {
+  .mat-form-field-wrapper {
+    padding-bottom: 0px;
+  }
+  .mat-form-field-underline {
+    bottom: 0.25em;
+  }
+}
+
+.nowrap-container {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.list-container {
+  min-height: 300px;
+  margin-bottom: 15px;
+}
+
+.wizard-step-container {
+  font-size: 14px;
+  min-height: 350px;
+  min-width: 250px;
+}
+
+.mat-stepper-horizontal .mat-horizontal-content-container {
+  padding: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.mat-pseudo-checkbox-checked {
+  background: $primary;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.mat-grid-tile .mat-icon {
+  color: $charcoal-gray;
+  cursor: pointer;
+  opacity: .8;
+  &:hover {
+      opacity: 1;
+  }
+}

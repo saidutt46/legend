@@ -1,0 +1,9 @@
+@import "../../../assets/scss-globals/main";
+
+mat-icon {
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+}

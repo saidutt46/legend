@@ -1,3 +1,16 @@
-<p>
-  header works!
-</p>
+<mat-toolbar class="header">
+  <mat-toolbar-row>
+    <button fxFlex="40px" mat-icon-button (click)="toggleSidenav.emit()" matTooltip="Navigation Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div fxFlex>
+      <div fxHide fxShow.gt-sm>Legendary Suite</div>
+      <div fxShow fxHide.gt-sm>Legend</div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxShow fxHide.gt-xs fxLayout="row-reverse">
+    <div fxFlex fxLayout="row" fxLayoutAlign="end center">
+      <mat-icon>person</mat-icon>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

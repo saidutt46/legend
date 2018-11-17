@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<div>
+  <app-header (toggleSidenav)="sidenav.toggle()"></app-header>
+  <mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav #sidenav class="app-sidenav" mode="push">
+        <mat-nav-list>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" mat-list-item routerLink="/">
+              <mat-icon class="nav-icons">home</mat-icon>  Home</a>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" mat-list-item routerLink="/login">
+               <mat-icon class="nav-icons">mood</mat-icon>   Login</a>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" mat-list-item routerLink="/register">
+              <mat-icon class="nav-icons">account_circle</mat-icon> Register</a>
+            <a [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" mat-list-item routerLink="/dashboard">
+              <mat-icon class="nav-icons">select_all</mat-icon> Legend</a>
+          </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-container>
+      <router-outlet></router-outlet>
+    </mat-sidenav-container>
+  </mat-sidenav-container>
+</div>
